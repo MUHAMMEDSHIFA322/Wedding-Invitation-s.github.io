@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shifa &amp; Sana · Noor</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cinzel:wght@500;700&family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#050716;--gold:#e8c47c;--pale:#fff2d0;--ink:#f1e9d8;--mute:#aeb0c6;--card:rgba(14,16,40,.62);color-scheme:dark;box-sizing:border-box}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Cormorant Garamond',Georgia,serif;font-size:19px;line-height:1.45;text-align:center;overflow-x:hidden;padding-bottom:env(safe-area-inset-bottom,0px)}
+#aur{position:fixed;inset:0;width:100%;height:100%;z-index:0;opacity:.85}
+#stars{position:fixed;inset:0;z-index:0;pointer-events:none}
+#stars i{position:absolute;width:2px;height:2px;border-radius:50%;background:#fff;animation:tw 4s ease-in-out infinite}
+@keyframes tw{50%{opacity:.1;transform:scale(.5)}}
+#cf{position:fixed;inset:0;width:100%;height:100%;z-index:60;pointer-events:none}
+#bar{position:fixed;top:0;left:0;height:3px;width:0;z-index:70;background:linear-gradient(90deg,#6ee7c8,var(--gold),#ff9e6b);box-shadow:0 0 12px var(--gold)}
+main{position:relative;z-index:2}
+.sec{padding:90px 22px}
+.w{max-width:560px;margin:0 auto}
+.cin{font-family:'Cinzel',serif;letter-spacing:.2em;text-transform:uppercase}
+.script{font-family:'Great Vibes',cursive;color:var(--gold)}
+.k{font-size:12px;color:var(--gold);margin-bottom:10px}
+.sm{color:var(--mute);font-size:16px;line-height:1.4}
+.gold{background:linear-gradient(100deg,var(--gold) 20%,#fff 45%,var(--gold) 70%);background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sh 6s linear infinite}
+@keyframes sh{to{background-position:-220% 0}}
+h2.cin{font-weight:500;font-size:15px;color:var(--gold);margin-bottom:26px}
+/* reveal */
+.rv,.rl,.rr,.zi{opacity:0;filter:blur(7px);transition:opacity 1.1s cubic-bezier(.2,.7,.2,1),transform 1.1s cubic-bezier(.2,.7,.2,1),filter 1.1s}
+.rv{transform:translateY(40px)}.rl{transform:translateX(-60px)}.rr{transform:translateX(60px)}.zi{transform:scale(.8)}
+.in{opacity:1;transform:none;filter:none}
+.lt span{display:inline-block;opacity:0;transform:translateY(.6em) rotateX(70deg);transition:opacity .7s,transform .8s;transition-delay:calc(var(--i)*45ms)}
+.lt.in span{opacity:1;transform:none}
+/* hero */
+#hero{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:calc(env(safe-area-inset-top,0px) + 30px) 22px 20svh}
+
+.dr{fill:none;stroke:var(--gold);stroke-width:1;stroke-dasharray:1;stroke-dashoffset:1;animation:dr 3.2s cubic-bezier(.5,0,.2,1) forwards;animation-delay:calc(var(--d)*.3s)}
+@keyframes dr{to{stroke-dashoffset:0}}
+.spin{transform-origin:0 0;animation:sp 80s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+.mono{font-family:'Great Vibes',cursive;fill:var(--pale);font-size:40px;opacity:0;animation:fi 2s 2.4s forwards}
+@keyframes fi{to{opacity:1}}
+#hero h1{font-weight:500;font-size:clamp(24px,7vw,40px);line-height:1.15;margin-top:18px;color:var(--pale);text-shadow:0 0 30px rgba(232,196,124,.5)}
+#hero h1 em{display:block;font-family:'Great Vibes',cursive;font-style:normal;font-size:1.6em;color:var(--gold);letter-spacing:0;line-height:1}
+.pill{display:inline-block;margin-top:20px;padding:10px 20px;border:1px solid var(--gold);border-radius:40px;font-size:12px;color:var(--pale);background:rgba(5,7,22,.4);backdrop-filter:blur(6px)}
+.cue{margin-top:26px;font-size:10px;color:var(--mute);animation:bob 2s infinite}
+@keyframes bob{50%{transform:translateY(8px);opacity:.4}}
+/* cards */
+.card{background:var(--card);border:1px solid rgba(232,196,124,.35);border-radius:22px;padding:26px 20px;backdrop-filter:blur(10px);position:relative;overflow:hidden}
+.t3{transform-style:preserve-3d;transition:transform .15s;will-change:transform}
+.t3::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at var(--mx,50%) var(--my,0%),rgba(255,240,200,.22),transparent 55%);pointer-events:none}
+.nm{font-size:25px;color:var(--pale);margin:4px 0 10px}
+.line{width:2px;height:70px;margin:0 auto;background:linear-gradient(var(--gold),transparent);transform:scaleY(0);transform-origin:top;transition:transform 1.2s .3s}
+.in .line,.line.in{transform:none}
+.heart{font-size:30px;color:#ff8fa3;animation:hb 1.4s infinite;margin:-4px 0 4px}
+@keyframes hb{20%{transform:scale(1.3)}40%{transform:scale(1)}}
+.ar{font-family:'Amiri',serif;font-size:clamp(24px,6.4vw,32px);line-height:2;direction:rtl}
+/* calendar */
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;font-size:16px}
+.cal b{font-family:'Cinzel',serif;font-size:11px;color:var(--gold);font-weight:500}
+.cal span{padding:8px 0;border-radius:50%;color:var(--mute)}
+.cal .hl{position:relative;color:#1b1204;background:linear-gradient(135deg,var(--gold),#fff);font-weight:700}
+.cal .hl::after{content:"";position:absolute;inset:-6px;border-radius:50%;border:1.5px solid var(--gold);animation:rg 2s infinite}
+@keyframes rg{from{transform:scale(.8);opacity:1}to{transform:scale(1.7);opacity:0}}
+.cd{display:flex;gap:8px;justify-content:center;margin-top:22px}
+.cd div{flex:1;max-width:84px;padding:12px 4px;border:1px solid rgba(232,196,124,.4);border-radius:14px;background:var(--card)}
+.cd b{display:block;font-family:'Cinzel',serif;font-size:27px;color:var(--pale);font-weight:500}
+.cd b.pop{animation:pp .4s}
+@keyframes pp{40%{transform:translateY(-6px);color:var(--gold)}}
+.cd span{font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute)}
+.arc{width:100%;max-width:420px;margin:0 auto;display:block}
+.btns{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:18px}
+.btn{font-family:'Cinzel',serif;letter-spacing:.13em;font-size:11px;text-transform:uppercase;color:#1b1204;background:linear-gradient(120deg,var(--gold),var(--pale));padding:14px 20px;border-radius:40px;text-decoration:none;border:0;cursor:pointer;display:inline-block;box-shadow:0 0 24px rgba(232,196,124,.3);transition:transform .2s}
+.btn:active{transform:scale(.96)}
+.btn.o{background:rgba(5,7,22,.5);color:var(--gold);border:1px solid var(--gold);box-shadow:none}
+input,textarea{width:100%;margin-top:10px;padding:13px;background:rgba(0,0,0,.35);border:1px solid rgba(232,196,124,.6);color:var(--ink);font:inherit;text-align:center;border-radius:12px;resize:none}
+.step{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:14px}
+.step button{width:42px;height:42px;border-radius:50%;border:1px solid var(--gold);background:none;color:var(--gold);font-size:22px;cursor:pointer}
+.step b{font-family:'Cinzel',serif;font-size:26px;color:var(--pale);min-width:40px;font-weight:500}
+#wall{display:grid;gap:10px;margin-top:22px;text-align:left}
+.ws{padding:14px 16px;border-left:3px solid var(--gold);background:var(--card);border-radius:0 14px 14px 0;animation:wi .7s both}
+.ws b{font-family:'Cinzel',serif;font-size:11px;letter-spacing:.15em;color:var(--gold);font-weight:500}
+@keyframes wi{from{opacity:0;transform:translateX(-30px)}}
+footer{padding:60px 22px calc(env(safe-area-inset-bottom,0px) + 70px)}
+.sky{position:absolute;left:0;right:0;bottom:0;width:100%;height:26svh;pointer-events:none;z-index:0}
+#hero>*:not(.sky):not(.ss){position:relative;z-index:1}
+#moon{width:min(52vw,28svh);height:min(52vw,28svh);margin:4px 0 6px;position:relative;animation:mr 2.4s cubic-bezier(.2,.8,.2,1) both;will-change:transform}
+#moon::before{content:"";position:absolute;inset:-45%;background:radial-gradient(circle,rgba(232,196,124,.42),transparent 60%);animation:mgl 4s ease-in-out infinite}
+#moon svg{position:relative;width:100%;height:100%}
+.stw{transform-box:fill-box;transform-origin:center;animation:tw2 2.4s infinite}
+.ss{position:absolute;top:14%;left:-20%;width:110px;height:1.5px;background:linear-gradient(90deg,transparent,#fff);opacity:0;animation:ssa 8s infinite;z-index:0}
+.ss.b{top:30%;animation-delay:4.5s;width:80px}
+.wl{animation:fk 3.2s infinite}
+@keyframes mr{from{opacity:0;transform:translateY(90px) scale(.7)}}
+@keyframes mgl{50%{opacity:.5;transform:scale(1.15)}}
+@keyframes tw2{50%{transform:scale(.6) rotate(20deg);opacity:.6}}
+@keyframes ssa{0%{transform:translate(0,0) rotate(24deg);opacity:0}3%{opacity:1}14%{transform:translate(130vw,58vw) rotate(24deg);opacity:0}100%{opacity:0}}
+@keyframes fk{50%{opacity:.35}}
+#hero h1{animation:gl 4s ease-in-out infinite}
+@keyframes gl{50%{text-shadow:0 0 55px rgba(232,196,124,.95)}}
+h2.cin::after{content:"";display:block;width:0;height:1px;background:var(--gold);margin:12px auto 0;transition:width 1.2s .3s}
+h2.cin.in::after{width:90px}
+.card::before{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,240,200,.14),transparent);transform:skewX(-20deg);animation:sw 6s infinite;pointer-events:none}
+@keyframes sw{to{left:130%}}
+.btn:not(.o){animation:gp 2.6s infinite}
+@keyframes gp{50%{box-shadow:0 0 40px rgba(232,196,124,.65)}}
+.in .cal span{animation:cs .5s both;animation-delay:calc(var(--n)*28ms)}
+@keyframes cs{from{opacity:0;transform:scale(.3)}}
+.cd div{animation:fl 4s ease-in-out infinite}.cd div:nth-child(2){animation-delay:.5s}.cd div:nth-child(3){animation-delay:1s}.cd div:nth-child(4){animation-delay:1.5s}
+@keyframes fl{50%{transform:translateY(-6px)}}
+.mq{position:relative;z-index:2;overflow:hidden;white-space:nowrap;border-top:1px solid rgba(232,196,124,.3);border-bottom:1px solid rgba(232,196,124,.3);padding:12px 0;background:rgba(5,7,22,.55);backdrop-filter:blur(6px)}
+.mq div{display:inline-block;animation:mqv 30s linear infinite;font-family:'Cinzel',serif;letter-spacing:.3em;font-size:12px;color:var(--gold)}
+@keyframes mqv{to{transform:translateX(-50%)}}
+#pt{position:fixed;inset:0;width:100%;height:100%;z-index:55;pointer-events:none}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01s!important;transition-duration:.01s!important}}
+</style>
+</head>
+<body>
+<canvas id="aur"></canvas><div id="stars"></div><canvas id="cf"></canvas><canvas id="pt"></canvas><div id="bar"></div>
+
+<main>
+<section id="hero">
+  <div class="cin sm" style="font-size:10px;max-width:300px;margin-bottom:14px">In the name of Allah, the Most Gracious, the Most Merciful</div>
+  <div class="ss"></div><div class="ss b"></div>
+  <svg class="sky" id="sk1" viewBox="0 0 400 100" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><path fill="#0d1233" d="M0 100V62Q50 40 110 60T230 52T330 58T400 50V100Z"/></svg>
+  <svg class="sky" id="sk2" viewBox="0 0 400 100" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><g fill="#060818"><rect x="40" y="48" width="9" height="52"/><path d="M38 48a6.5 6.5 0 0 1 13 0z"/><rect x="43.5" y="30" width="2" height="14"/><rect x="120" y="72" width="110" height="28"/><path d="M130 72a45 45 0 0 1 90 0z"/><rect x="174" y="40" width="2" height="12"/><rect x="236" y="82" width="28" height="18"/><path d="M236 82a14 14 0 0 1 28 0z"/><rect x="300" y="44" width="9" height="56"/><path d="M298 44a6.5 6.5 0 0 1 13 0z"/><rect x="303.5" y="26" width="2" height="14"/><rect x="320" y="78" width="30" height="22"/><rect x="355" y="84" width="45" height="16"/><rect x="0" y="86" width="35" height="14"/><rect x="60" y="84" width="40" height="16"/></g><g fill="#ffd98a" class="wl"><circle cx="150" cy="86" r="1.6"/><circle cx="175" cy="86" r="1.6"/><circle cx="200" cy="86" r="1.6"/><circle cx="330" cy="88" r="1.5"/><circle cx="372" cy="92" r="1.5"/><circle cx="15" cy="92" r="1.5"/><circle cx="75" cy="91" r="1.5"/><circle cx="250" cy="90" r="1.5"/></g></svg>
+  <div id="moon"><svg viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="mg"><stop offset="0" stop-color="#fff2d0"/><stop offset="1" stop-color="#e8c47c"/></radialGradient><mask id="mk"><rect width="200" height="200" fill="#fff"/><circle cx="120" cy="82" r="56" fill="#000"/></mask></defs><circle cx="100" cy="100" r="68" fill="url(#mg)" mask="url(#mk)"/><path class="stw" d="M138 62l4 11 11 4-11 4-4 11-4-11-11-4 11-4z" fill="#fff2d0"/></svg></div>
+  <h1 class="cin"><span class="lt">Muhammed Shifa</span><em>&amp;</em><span class="lt">Sana Nasri</span></h1>
+  <div class="pill cin rv">Sunday · 13 December 2026</div>
+  <div class="cue cin">Scroll ↓</div>
+</section>
+<div class="mq"><div>★ Barakallahu Lakuma ★ Shifa &amp; Sana ★ 13 · 12 · 2026 ★ Insha Allah ★ Barakallahu Lakuma ★ Shifa &amp; Sana ★ 13 · 12 · 2026 ★ Insha Allah ★ Barakallahu Lakuma ★ Shifa &amp; Sana ★ 13 · 12 · 2026 ★ Insha Allah ★ Barakallahu Lakuma ★ Shifa &amp; Sana ★ 13 · 12 · 2026 ★ Insha Allah </div></div>
+
+<section class="sec"><div class="w">
+  <div class="k cin rv">With the blessings of our families</div>
+  <div class="script rv" style="font-size:34px;line-height:1.1">Mr. Kamarudheen (Shamsu)<br>&amp; Mrs. Rahana Kamarudheen</div>
+  <p class="sm rv" style="margin-top:8px">Valiyakath Kuttippurath House, Cheruvathani</p>
+  <p class="rv" style="margin-top:22px;font-size:21px">cordially invite you and your family to the blessed occasion of our beloved son</p>
+</div></section>
+
+<section class="sec" style="padding-top:20px"><div class="w">
+  <div class="card t3 rl">
+    <div class="k cin">The Groom</div>
+    <div class="nm cin">Muhammed Shifa</div>
+    <p class="sm">Grand S/o. Valiyakath Kuttippurath Makkaru (Late) &amp; Panthalayinitharayil Beevathukutty (Late) and Puthanpurayil Moidutty (Late) &amp; Valiyakath Kuttippurath Kunjimma (Late)</p>
+  </div>
+  <div class="line"></div><div class="heart rv">♥</div><div class="line" style="height:40px"></div>
+  <div class="card t3 rr">
+    <div class="k cin">The Bride</div>
+    <div class="nm cin">Sana Nasri</div>
+    <p>D/o. Mr. Ashraf &amp; Mrs. Rasiya Ashraf</p>
+    <p class="sm">Valiparambil House, Vadakkekad, Nalamkallu · 7591931512</p>
+    <p class="sm" style="margin-top:6px">Grand D/o. Valiparambil Usafunni (Late) &amp; Elyamattil Aminu and Ediyattayil Aboobacker (Late) &amp; Kadungothayil Kunjimol (Late)</p>
+  </div>
+</div></section>
+
+<section class="sec"><div class="w">
+  <div class="k cin rv">A prayer for the couple</div>
+  <div class="ar gold zi">بَارَكَ اللَّهُ لَكُمَا وَبَارَكَ عَلَيْكُمَا وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ</div>
+  <p class="rv" style="margin-top:12px;font-style:italic;font-size:20px">May Allah bless you both, shower His blessings upon you, and unite you in goodness.</p>
+  <div class="script rv" style="font-size:36px;margin-top:20px">Insha Allah</div>
+</div></section>
+
+<section class="sec"><div class="w">
+  <h2 class="cin rv">Save the date</h2>
+  <div class="card zi">
+    <div class="cin" style="color:var(--pale);margin-bottom:14px">December 2026</div>
+    <div class="cal" id="cal"></div>
+  </div>
+  <div class="cd rv"><div><b id="d">--</b><span>Days</span></div><div><b id="h">--</b><span>Hours</span></div><div><b id="m">--</b><span>Mins</span></div><div><b id="s">--</b><span>Secs</span></div></div>
+  <p class="sm rv" style="margin-top:12px">until the Nikkah · 11:30 AM</p>
+  <div class="btns rv"><a class="btn o" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Shifa+%26+Sana+Wedding+Reception&amp;dates=20261213T113000Z/20261213T153000Z&amp;location=KP+Namboodthiri%27s+Auditorium,+Vadakkekkad&amp;details=Wedding+reception+of+Muhammed+Shifa+and+Sana+Nasri">Add to calendar</a></div>
+</div></section>
+
+<section class="sec"><div class="w">
+  <h2 class="cin rv">The Nikkah</h2>
+  <div class="card t3 zi">
+    <div class="k cin">Sunday · 13 December 2026</div>
+    <div class="script" style="font-size:30px;line-height:1">4 Rajab 1448</div>
+    <div class="nm cin" style="font-size:32px;margin-top:12px">11:30 AM</div>
+    <div class="cin" style="color:var(--pale);font-size:18px">TMK Regency</div>
+    <p class="sm">Vadakkekad</p>
+    <div class="btns"><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=TMK+Regency+Vadakkekad">Get directions</a><a class="btn o" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Shifa+%26+Sana+Nikkah&amp;dates=20261213T060000Z/20261213T070000Z&amp;location=TMK+Regency,+Vadakkekad&amp;details=Nikkah+of+Muhammed+Shifa+and+Sana+Nasri">Add to calendar</a><a class="btn o" href="tel:+917591931512">Call bride’s family</a></div>
+  </div>
+  <h2 class="cin rv" style="margin-top:64px">The Reception</h2>
+  <svg class="arc rv" viewBox="0 0 400 200" aria-label="Between 5 PM and 9 PM">
+    <defs><linearGradient id="ag" x1="0" x2="1"><stop offset="0" stop-color="#ffb066"/><stop offset=".5" stop-color="#e8c47c"/><stop offset="1" stop-color="#8f8cff"/></linearGradient></defs>
+    <path d="M40 170A160 160 0 0 1 360 170" fill="none" stroke="rgba(232,196,124,.25)" stroke-width="2" stroke-dasharray="2 8" stroke-linecap="round"/>
+    <path id="arcp" d="M40 170A160 160 0 0 1 360 170" fill="none" stroke="url(#ag)" stroke-width="3" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+    <circle id="dot" r="9" cx="40" cy="170" fill="#fff2d0"/><circle id="dot2" r="18" cx="40" cy="170" fill="rgba(255,242,208,.25)"/>
+    <text x="40" y="195" fill="#e8c47c" font-family="Cinzel,serif" font-size="14" text-anchor="middle">5:00 PM</text>
+    <text x="360" y="195" fill="#e8c47c" font-family="Cinzel,serif" font-size="14" text-anchor="middle">9:00 PM</text>
+    <text x="200" y="120" fill="#fff2d0" font-family="Great Vibes,cursive" font-size="34" text-anchor="middle">Come as the sun sets</text>
+  </svg>
+  <p class="sm rv">Join us anytime between 5:00 PM and 9:00 PM. Your presence and prayers will make our day complete.</p>
+  <div class="card t3 zi" style="margin-top:26px">
+    <div class="k cin">Venue</div>
+    <div class="nm cin" style="font-size:20px">KP Namboodthiri’s Auditorium</div>
+    <p class="sm">Vadakkekkad</p>
+    <div class="btns"><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=KP+Namboodthiri%27s+Auditorium+Vadakkekkad">Get directions</a><a class="btn o" href="tel:+917561873536">Call host</a></div>
+  </div>
+</div></section>
+
+<section class="sec"><div class="w">
+  <h2 class="cin rv">Leave a blessing</h2>
+  <div class="card rv">
+    <input id="wn" placeholder="Your name" maxlength="30">
+    <textarea id="wm" rows="3" maxlength="120" placeholder="Write a prayer or wish for Shifa &amp; Sana…"></textarea>
+    <div class="btns"><button class="btn" id="wadd">Add to wall ✨</button><button class="btn o" id="wsend">Send to family</button></div>
+  </div>
+  <div id="wall"></div>
+  <p class="sm" id="wh" style="margin-top:14px">Be the first to add a blessing. Wishes appear on this screen; use “Send to family” to deliver yours on WhatsApp.</p>
+</div></section>
+
+<section class="sec"><div class="w">
+  <h2 class="cin rv">Will you join us?</h2>
+  <div class="card rv">
+    <p class="sm">Your name</p><input id="rn" placeholder="Type your name" maxlength="30">
+    <div class="btns"><button class="btn" id="yes">I’ll be there 🤍</button><button class="btn o" id="no">Can’t make it</button></div>
+    <p class="sm" style="margin-top:12px">Opens WhatsApp with a message to the family</p>
+  </div>
+</div></section>
+
+<footer>
+  <div class="script" style="font-size:40px">Sharing Happiness</div>
+  <div class="cin gold" style="font-size:20px;margin:6px 0 24px">Heiza Suhail</div>
+  <div class="btns"><button class="btn o" id="sh">Share invitation</button><a class="btn o" href="tel:+917561873536">Call 7561873536</a></div>
+  <p class="sm" style="margin-top:30px">Muhammed Shifa &amp; Sana Nasri · 13.12.2026</p>
+</footer>
+</main>
+
+<script>
+(function(){
+function $(i){return document.getElementById(i)}
+function R(a,b){return a+Math.random()*(b-a)}
+// medallion
+var m='<g class="spin"><circle class="dr" style="--d:0" r="92" pathLength="1"/><circle r="97" fill="none" stroke="#e8c47c" stroke-width="1.6" stroke-dasharray="1 5" stroke-linecap="round" opacity=".6"/>';
+for(var k=0;k<8;k++)m+='<path class="dr" style="--d:'+(1+k*.2)+'" pathLength="1" transform="rotate('+k*45+')" d="M0 -52Q16 -68 0 -86Q-16 -68 0 -52Z"/>';
+m+='</g><circle class="dr" style="--d:1" r="78" pathLength="1"/><rect class="dr" style="--d:2" x="-46" y="-46" width="92" height="92" pathLength="1"/><rect class="dr" style="--d:2.3" x="-46" y="-46" width="92" height="92" transform="rotate(45)" pathLength="1"/><rect class="dr" style="--d:3" x="-30" y="-30" width="60" height="60" transform="rotate(22.5)" pathLength="1"/><circle class="dr" style="--d:3.3" r="26" pathLength="1"/><text class="mono" text-anchor="middle" y="13">S&amp;S</text>';
+
+// stars
+var st=$('stars');for(var i=0;i<70;i++){var s=document.createElement('i');s.style.left=R(0,100)+'%';s.style.top=R(0,100)+'%';s.style.animationDelay=R(0,4)+'s';s.style.animationDuration=R(3,7)+'s';st.appendChild(s)}
+// letters
+document.querySelectorAll('.lt').forEach(function(e){var t=e.textContent;e.textContent='';var n=0;t.split('').forEach(function(ch){var sp=document.createElement('span');sp.textContent=ch===' '?'\u00a0':ch;sp.style.setProperty('--i',n++);e.appendChild(sp)})});
+// reveal
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');if(e.target.id==='arcw')arc();io.unobserve(e.target)}})},{threshold:.18});
+document.querySelectorAll('.rv,.rl,.rr,.zi,.lt,.line').forEach(function(e){io.observe(e)});
+setTimeout(function(){document.querySelectorAll('#hero .lt').forEach(function(e){e.classList.add('in')})},300);
+// calendar
+var c=$('cal'),h='';'SMTWTFS'.split('').forEach(function(d){h+='<b>'+d+'</b>'});
+var f=new Date(2026,11,1).getDay();for(var i=0;i<f;i++)h+='<i></i>';
+for(var d=1;d<=31;d++)h+='<span'+(d===13?' class="hl"':'')+' style="--n:'+d+'">'+d+'</span>';c.innerHTML=h;
+// arc animation
+var arcDone=false;
+function arc(){if(arcDone)return;arcDone=true;var p=$('arcp'),dot=$('dot'),d2=$('dot2'),t0=null;
+  function st(t){if(!t0)t0=t;var u=Math.min((t-t0)/3500,1),e=1-Math.pow(1-u,3),a=Math.PI-e*Math.PI,x=200+160*Math.cos(a),y=170-160*Math.sin(a);
+    p.setAttribute('stroke-dashoffset',1-e);dot.setAttribute('cx',x);dot.setAttribute('cy',y);d2.setAttribute('cx',x);d2.setAttribute('cy',y);if(u<1)requestAnimationFrame(st)}
+  requestAnimationFrame(st)}
+var aw=document.querySelector('.arc');aw.id='arcw';io.observe(aw);
+// countdown
+var tg=new Date('2026-12-13T11:30:00+05:30').getTime(),last={};
+function p2(n){return String(n).padStart(2,'0')}
+function tick(){var l=Math.max(0,Math.floor((tg-Date.now())/1000)),v={d:Math.floor(l/86400),h:p2(Math.floor(l%86400/3600)),m:p2(Math.floor(l%3600/60)),s:p2(l%60)};
+  for(var k in v){var el=$(k);if(last[k]!==v[k]){el.textContent=v[k];el.classList.remove('pop');void el.offsetWidth;el.classList.add('pop');last[k]=v[k]}}}
+tick();setInterval(tick,1000);
+// tilt
+document.querySelectorAll('.t3').forEach(function(el){
+  function mv(x,y){var r=el.getBoundingClientRect(),px=(x-r.left)/r.width,py=(y-r.top)/r.height;
+    el.style.transform='perspective(700px) rotateY('+((px-.5)*14)+'deg) rotateX('+((.5-py)*14)+'deg)';el.style.setProperty('--mx',px*100+'%');el.style.setProperty('--my',py*100+'%')}
+  el.addEventListener('pointermove',function(e){mv(e.clientX,e.clientY)});
+  el.addEventListener('touchmove',function(e){var t=e.touches[0];mv(t.clientX,t.clientY)},{passive:true});
+  function rs(){el.style.transform=''}el.addEventListener('pointerleave',rs);el.addEventListener('touchend',rs);
+});
+// aurora
+var ac=$('aur'),ax=ac.getContext('2d'),aw2,ah2;
+function rz(){aw2=ac.width=Math.ceil(innerWidth/6);ah2=ac.height=Math.ceil(innerHeight/6)}rz();addEventListener('resize',rz);
+var bands=[{c:'60,220,180',y:.28,a:.16,f:2.2,s:.5},{c:'120,90,255',y:.42,a:.2,f:1.6,s:.35},{c:'255,150,100',y:.62,a:.14,f:2.8,s:.25},{c:'80,160,255',y:.8,a:.12,f:1.9,s:.4}];
+var bar=$('bar'),med=$('moon'),sk1=$('sk1'),sk2=$('sk2');
+function loop(t){
+  ax.clearRect(0,0,aw2,ah2);ax.globalCompositeOperation='lighter';
+  var sy=scrollY,sc=sy/Math.max(1,document.documentElement.scrollHeight-innerHeight);
+  bands.forEach(function(b,i){
+    var by=((b.y+Math.sin(sc*6+i)*.1)%1)*ah2;
+    ax.beginPath();ax.moveTo(0,ah2);
+    for(var x=0;x<=aw2;x+=3){var y=by+Math.sin(x/aw2*b.f*6.28+t*.0004*b.s*3+i*2)*ah2*.1+Math.sin(x/aw2*9+t*.0007+i)*ah2*.03;ax.lineTo(x,y)}
+    ax.lineTo(aw2,ah2);ax.closePath();
+    var g=ax.createLinearGradient(0,by-ah2*.2,0,by+ah2*.4);g.addColorStop(0,'rgba('+b.c+',0)');g.addColorStop(.35,'rgba('+b.c+','+b.a+')');g.addColorStop(1,'rgba('+b.c+',0)');ax.fillStyle=g;ax.fill()});
+  bar.style.width=(sc*100)+'%';
+  med.style.transform='translateY('+(sy*.3)+'px) scale('+(1-Math.min(sy/1600,.25))+')';med.style.opacity=Math.max(0,1-sy/700);sk1.style.transform='translateY('+(sy*.06)+'px)';sk2.style.transform='translateY('+(sy*.14)+'px)';
+  requestAnimationFrame(loop)}
+requestAnimationFrame(loop);
+// confetti
+var cf=$('cf'),cx=cf.getContext('2d'),ps=[],run=false;
+function cz(){cf.width=innerWidth;cf.height=innerHeight}cz();addEventListener('resize',cz);
+function burst(x,y){for(var i=0;i<110;i++){var a=R(0,6.28),v=R(3,11);ps.push({x:x,y:y,vx:Math.cos(a)*v,vy:Math.sin(a)*v-4,l:1,r:R(1.5,4),c:['#e8c47c','#fff2d0','#ff9e6b','#6ee7c8'][i%4]})}if(!run){run=true;requestAnimationFrame(cl)}}
+function cl(){cx.clearRect(0,0,cf.width,cf.height);ps=ps.filter(function(p){p.x+=p.vx;p.y+=p.vy;p.vy+=.22;p.vx*=.99;p.l-=.011;if(p.l<=0)return false;cx.globalAlpha=p.l;cx.fillStyle=p.c;cx.fillRect(p.x,p.y,p.r*1.6,p.r);return true});
+  if(ps.length)requestAnimationFrame(cl);else{run=false;cx.clearRect(0,0,cf.width,cf.height)}}
+// rsvp
+
+function wa(m){window.open('https://wa.me/917561873536?text='+encodeURIComponent(m),'_blank')}
+$('yes').onclick=function(e){var n=$('rn').value.trim()||'A guest';burst(e.clientX,e.clientY);
+  wa(n+' here. Insha Allah, '+'I will'+' be attending Shifa & Sana’s reception on 13 December. 🤍')};
+$('no').onclick=function(){var n=$('rn').value.trim()||'A guest';wa(n+' here. Sorry, I can’t make it to Shifa & Sana’s reception, but you have all my prayers. 🤍')};
+// wishes
+function wmsg(){return {n:$('wn').value.trim()||'A well-wisher',m:$('wm').value.trim()}}
+$('wadd').onclick=function(e){var w=wmsg();if(!w.m){$('wm').focus();return}
+  var d=document.createElement('div');d.className='ws';var b=document.createElement('b');b.textContent=w.n;var p=document.createElement('div');p.textContent=w.m;d.appendChild(b);d.appendChild(p);
+  $('wall').insertBefore(d,$('wall').firstChild);$('wh').style.display='none';$('wm').value='';burst(e.clientX,e.clientY)};
+$('wsend').onclick=function(){var w=wmsg();if(!w.m){$('wm').focus();return}wa('Blessing for Shifa & Sana from '+w.n+': '+w.m+' 🤍')};
+$('sh').onclick=function(){var d={title:'Shifa & Sana',text:'You’re invited to Shifa & Sana’s wedding reception, 13 December 2026',url:location.href};
+  if(navigator.share)navigator.share(d).catch(function(){});else if(navigator.clipboard)navigator.clipboard.writeText(d.url).then(function(){alert('Link copied!')}).catch(function(){})};
+// petals + touch sparkle trail
+var pt=$('pt'),pc=pt.getContext('2d'),PW,PH,pet=[],tr=[],lt2=0;
+function pz(){PW=pt.width=innerWidth;PH=pt.height=innerHeight}pz();addEventListener('resize',pz);
+function np(init){return{x:R(0,PW),y:init?R(-PH,PH):R(-40,-10),s:R(5,10),vy:R(.5,1.3),ph:R(0,6),sw:R(.4,1.1),r:R(0,6.28),vr:R(-.02,.02),c:Math.random()<.5?'rgba(232,196,124,':'rgba(255,170,190,'}}
+
+function tp(e){var n=performance.now();if(n-lt2<28)return;lt2=n;tr.push({x:e.clientX,y:e.clientY,vx:R(-.6,.6),vy:R(.2,1),l:1,s:R(1.5,3.5)})}
+addEventListener('pointermove',tp);
+addEventListener('touchmove',function(e){var t=e.touches[0];if(t)tp({clientX:t.clientX,clientY:t.clientY})},{passive:true});
+function pl2(t){pc.clearRect(0,0,PW,PH);
+  pet.forEach(function(p,i){p.y+=p.vy;p.x+=Math.sin(t*.001*p.sw+p.ph)*.7;p.r+=p.vr;if(p.y>PH+20)pet[i]=np(false);
+    pc.save();pc.translate(p.x,p.y);pc.rotate(p.r);pc.scale(1,.55+.45*Math.sin(t*.002+p.ph));pc.fillStyle=p.c+'.55)';pc.beginPath();pc.ellipse(0,0,p.s,p.s*.5,0,0,6.28);pc.fill();pc.restore()});
+  for(var j=tr.length-1;j>=0;j--){var q=tr[j];q.x+=q.vx;q.y+=q.vy;q.l-=.03;if(q.l<=0){tr.splice(j,1);continue}pc.fillStyle='rgba(255,230,160,'+q.l+')';pc.beginPath();pc.arc(q.x,q.y,q.s*q.l,0,6.28);pc.fill()}
+  requestAnimationFrame(pl2)}
+requestAnimationFrame(pl2);
+})();
+</script>
+</body>
+</html>
